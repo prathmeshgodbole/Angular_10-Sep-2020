@@ -45,6 +45,15 @@
     <h3> Event Binding </h3>
     <div class="row">
         <div class="col">
+            <div><input type="text" [style.font-weight]="fntwt"></div>
+            <br/>
+
+            <div>
+                <input type="button" value="Increase" class="btn btn-info" (click)="clk(1)">
+                <input type="button" value="Decrease" class="btn btn-danger" (click)="clk(2)">
+            </div>
+            <br/>
+
 
         </div>
     </div>

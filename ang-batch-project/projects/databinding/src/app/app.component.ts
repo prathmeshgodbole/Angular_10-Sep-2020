@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  // For Property Binding
   title = 'databinding';
 
   name='Prathmesh';
@@ -15,4 +17,18 @@ export class AppComponent {
 
   brd='1px solid green';
 
+  // For EVENT Binding
+  fntwt=500;
+
+  clk(btn: number){
+
+    if(btn == 1){
+    this.fntwt += 250;
+    }
+    else{
+      this.fntwt -= 250;
+    }
+
+    console.log(` Button Clicked `);
+  }
 }
