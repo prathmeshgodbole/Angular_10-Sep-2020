@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.onlyred {
+    color: red;
+    border: 1px double red;
+}
+
+.container {
+    text-align: center;
+}

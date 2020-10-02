@@ -1,0 +1,50 @@
+<div class="container">
+    <h3> Property Binding </h3>
+    <div class="row">
+        <div class="col">
+
+            <!-- in app.component.TS TITLE is DECLARED -->
+            <p class="text-muted">This is {{title}}
+                <p class="text-muted">This is {{title.toUpperCase()}}</p>
+
+
+                <!-- in app.component.TS TITLEINFO() is DECLARED-->
+                <p class="text-muted">{{titleinfo()}}
+                </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <div><input type="text" [value]="title"></div>
+            <br/>
+            <div><input type="text" style="border:1px solid blue;color:blue"></div>
+            <br/>
+
+            <!-- in app.component.TS  BRD is DECLARED-->
+            <div><input type=" text " [style.border]="brd "></div>
+            <br/>
+
+            <!-- in app.component.CSS .ONLYRED is DECLARED <<< true / false >>> -->
+            <div><input type=" text " [class.onlyred]="true"></div>
+            <br/>
+
+            <!-- Bootstrap class -->
+            <div><input type=" text " [class.alert-danger]="true"></div>
+            <br/>
+
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<!-- <div class="container">
+    <h3> Event Binding </h3>
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div> -->
