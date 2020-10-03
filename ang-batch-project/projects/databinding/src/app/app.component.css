@@ -7,3 +7,7 @@
 .container {
     text-align: center;
 }
+
+p {
+    background-color: grey;
+}

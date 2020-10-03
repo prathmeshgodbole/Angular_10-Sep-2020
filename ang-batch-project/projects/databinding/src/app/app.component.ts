@@ -31,4 +31,43 @@ export class AppComponent {
 
     console.log(` Button Clicked `);
   }
+
+  // MOUSE EVENTS
+
+  counter = 0;
+
+  dblclick(){
+   return this.counter++;
+  }
+
+  drag(){
+    return this.counter++;
+  }
+
+  dragover(){
+    return this.counter++;
+  }
+
+  mousedown(){
+    return this.counter++;
+  }
+
+  mouseup(){
+    return this.counter++;
+  }
+
+  mouseenter(){
+    return this.counter++;
+  }
+
+  mouseleave(){
+    return this.counter++;
+  }
+
+  mouseover(){
+    return this.counter++;
+  }
+
+
+
 }
