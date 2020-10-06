@@ -10,21 +10,25 @@
         <div class="col ml-2">
             <input class="form-check-input" type="checkbox" id="Biodata" (change)="checkChange($event)" #Biodata>
             <label class="form-check-label" for="Biodata">Biodata</label>
+            <p>Checked={{Biodata.checked}}</p>
         </div>
 
         <div class="col ml-2">
             <input class="form-check-input" type="checkbox" id="Demographic" (change)="checkChange($event)" #Demographic>
             <label class=" form-check-label " for="Demographic">Demographic</label>
+            <p>Checked={{Demographic.checked}}</p>
         </div>
 
         <div class="col ml-2 ">
             <input class="form-check-input " type="checkbox" id="Educational" (change)="checkChange($event)" #Educational>
             <label class=" form-check-label " for="Educational">Educational</label>
+            <p>Checked={{Educational.checked}}</p>
         </div>
 
         <div class="col ml-2 ">
             <input class="form-check-input " type="checkbox" id="Personal" (change)="checkChange($event)" #Personal>
             <label class=" form-check-label " for="Personal">Personal</label>
+            <p>Checked={{Personal.checked}}</p>
         </div>
 
     </div>
