@@ -52,12 +52,29 @@ Personal: ElementRef<HTMLInputElement>
   // }
 }
 
-
 private calculateProgress(){
  console.log( `Biodata is Checked - ${this.Biodata.nativeElement.checked}`)
  console.log( `Demographic is Checked - ${this.Demographic.nativeElement.checked}`)
  console.log( `Educational is Checked - ${this.Educational.nativeElement.checked}`)
  console.log( `Personal is Checked - ${this.Personal.nativeElement.checked}`)
+
+ var count:number=0
+
+  if(this.Biodata.nativeElement.checked==true){
+count+=25
+ } if(this.Demographic.nativeElement.checked==true){
+count+=25
+ }  if(this.Educational.nativeElement.checked==true){
+count+=25
+ } if(this.Personal.nativeElement.checked==true){
+   count+=25
+ }
+this.progress=count
+// return this.Biodata.nativeElement.checked == true || this.Demographic.nativeElement.checked ==true ||
+// this.Educational.nativeElement.checked == true || this.Personal.nativeElement.checked ==true ? console.log(count+=25): console.log("Error")
+
+console.log(this.progress)
+
 }
 
 }
