@@ -1,10 +1,10 @@
 <div class="row mt-3">
     <div class="col">
-        <input type="text" class="form-control" (keyup)="sayColor($event)">
+        <!-- <input type="text" class="form-control" (keyup)="sayColor($event)"> -->
+        <input type="text" class="form-control" (keyup.enter)="sayColor($event)">
     </div>
 </div>
 <div class="row mt-3">
-    <div class="col border border-primary" [style.height.px]="200" [style.background]="bkCl">
-
+    <div class="col border border-primary" [style.height.px]="200" [style.width.px]="400" [style.background]="bkCl">
     </div>
 </div>
