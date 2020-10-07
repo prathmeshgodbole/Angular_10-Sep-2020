@@ -68,6 +68,10 @@ export class AppComponent {
     return this.counter++;
   }
 
+calcProg:number=0;
 
-
+  onProgress(calPrg:number){
+    console.log(`App Component-Profile Progress Called `)
+    this.calcProg=calPrg;
+  }
 }

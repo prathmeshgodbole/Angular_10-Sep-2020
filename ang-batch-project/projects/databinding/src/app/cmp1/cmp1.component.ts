@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cmp1',
@@ -12,4 +12,6 @@ export class Cmp1Component implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input()
+progress:number=0
 }

@@ -1,4 +1,6 @@
-import { ViewChild } from '@angular/core';
+// import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
+import { Output, ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +16,12 @@ export class Cmp2Component implements OnInit {
   ngOnInit(): void {
   }
 
-progress:number
+
+  @Output('profileprogress')
+  profileProgress: EventEmitter<number>=new EventEmitter()
+
+  
+  progress:number
 
 @ViewChild('Biodata')
 Biodata: ElementRef<HTMLInputElement>
@@ -74,6 +81,7 @@ this.progress=count
 // this.Educational.nativeElement.checked == true || this.Personal.nativeElement.checked ==true ? console.log(count+=25): console.log("Error")
 
 console.log(this.progress)
+this.profileProgress.emit(this.progress)
 
 }
 
