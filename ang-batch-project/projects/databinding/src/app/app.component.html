@@ -152,5 +152,7 @@
 <hr/>
 
 <h3>Cpm1 & Cmp2</h3>
-<app-cmp1 [progress]="calcProg"></app-cmp1>
+<app-cmp1 [progress]="calcProg">
+    <p #para class="alert alert-info">Hellow Coders Welcome.......</p>
+</app-cmp1>
 <app-cmp2 (profileprogress)="onProgress($event)"></app-cmp2>

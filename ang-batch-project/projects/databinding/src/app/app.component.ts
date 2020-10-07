@@ -1,3 +1,5 @@
+import { ElementRef } from '@angular/core';
+import { ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -68,10 +70,20 @@ export class AppComponent {
     return this.counter++;
   }
 
+
 calcProg:number=0;
 
   onProgress(calPrg:number){
     console.log(`App Component-Profile Progress Called `)
     this.calcProg=calPrg;
   }
+//
+@ViewChild('para',{static:true})
+para:ElementRef<HTMLElement>
+
+ngOnInit(){
+  console.log(this.para)
+}
+//
+
 }
