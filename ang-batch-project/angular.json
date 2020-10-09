@@ -510,6 +510,123 @@
           }
         }
       }
+    },
+    "homework-databinding": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/homework-databinding",
+      "sourceRoot": "projects/homework-databinding/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/homework-databinding",
+            "index": "projects/homework-databinding/src/index.html",
+            "main": "projects/homework-databinding/src/main.ts",
+            "polyfills": "projects/homework-databinding/src/polyfills.ts",
+            "tsConfig": "projects/homework-databinding/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/homework-databinding/src/favicon.ico",
+              "projects/homework-databinding/src/assets"
+            ],
+            "styles": [
+              "projects/homework-databinding/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/homework-databinding/src/environments/environment.ts",
+                  "with": "projects/homework-databinding/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "homework-databinding:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "homework-databinding:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "homework-databinding:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/homework-databinding/src/test.ts",
+            "polyfills": "projects/homework-databinding/src/polyfills.ts",
+            "tsConfig": "projects/homework-databinding/tsconfig.spec.json",
+            "karmaConfig": "projects/homework-databinding/karma.conf.js",
+            "assets": [
+              "projects/homework-databinding/src/favicon.ico",
+              "projects/homework-databinding/src/assets"
+            ],
+            "styles": [
+              "projects/homework-databinding/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/homework-databinding/tsconfig.app.json",
+              "projects/homework-databinding/tsconfig.spec.json",
+              "projects/homework-databinding/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/homework-databinding/e2e/protractor.conf.js",
+            "devServerTarget": "homework-databinding:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "homework-databinding:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "ang-batch-project",

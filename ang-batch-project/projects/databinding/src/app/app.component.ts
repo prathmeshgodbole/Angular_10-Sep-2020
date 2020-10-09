@@ -77,6 +77,7 @@ calcProg:number=0;
     console.log(`App Component-Profile Progress Called `)
     this.calcProg=calPrg;
   }
+
 //
 @ViewChild('para',{static:true})
 para:ElementRef<HTMLElement>
