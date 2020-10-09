@@ -19,33 +19,33 @@
                     <ul class="nav flex-column">
 
                         <li class="nav-item">
-                            <a class="nav-link active" (click)="onclick(Dashboard.firstElementChild.innerText)" id="Dashboard" #Dashboard>
-                                <lable for="Dashboard">Dashboard</lable>
+                            <!-- (click)="onclick(Dashboard.firstElementChild.innerText)" -->
+                            <a class="nav-link active" (click)="onclick($event)" id="Dashboard" #Dashboard>
+                               Dashboard <!-- <lable for="Dashboard">Dashboard</lable> -->
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" (click)="onclick($event)" id="Orders" #Orders>
-
-                                <lable for="Orders">Orders</lable>
+                                Orders<!-- <lable for="Orders">Orders</lable> -->
                             </a>
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link " (click)="onclick(Products.firstElementChild.innerText) " id="Products" #Products>
-                                <lable for="Products">Products</lable>
+                            <a class="nav-link " (click)="onclick($event) " id="Products" #Products>
+                                Products<!-- <lable for="Products">Products</lable> -->
                             </a>
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link " (click)="onclick(Customers.firstElementChild.innerText) " id="Customers" #Customers>
-                                <lable for="Customers">Customers</lable>
+                            <a class="nav-link " (click)="onclick($event) " id="Customers" #Customers>
+                                Customers<!-- <lable for="Customers">Customers</lable> -->
                             </a>
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link " (click)="onclick(Reports.firstElementChild.innerText) " id="Reports" #Reports>
-                                <lable for="Reports">Reports</lable>
+                            <a class="nav-link " (click)="onclick($event) " id="Reports" #Reports>
+                                Reports<!-- <lable for="Reports">Reports</lable> -->
                             </a>
                         </li>
 

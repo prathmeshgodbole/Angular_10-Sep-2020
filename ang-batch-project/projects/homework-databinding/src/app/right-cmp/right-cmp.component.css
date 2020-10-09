@@ -1,4 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 main {
-    top: -200px !important;
+    top: -100px!important;
+}
+
+.h2 {
+    color: black;
 }

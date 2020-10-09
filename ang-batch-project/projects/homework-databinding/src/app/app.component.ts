@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'homework-databinding';
 
+  dispName:string='';
 
+  onChange(dName:string){
+    console.log(`Name is changed `)
+    this.dispName=dName;
+  }
 }
 

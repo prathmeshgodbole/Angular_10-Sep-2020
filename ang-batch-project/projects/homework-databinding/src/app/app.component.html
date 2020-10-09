@@ -1,5 +1,5 @@
 <div class="container">
     <h1 style="text-align: center;">Homework</h1>
-    <app-left-cmp></app-left-cmp>
-    <app-right-cmp></app-right-cmp>
+    <app-left-cmp (change)="onChange($event)"></app-left-cmp>
+    <app-right-cmp [name]="dispName"></app-right-cmp>
 </div>

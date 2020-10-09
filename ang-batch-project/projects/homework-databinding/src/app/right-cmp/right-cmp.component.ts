@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-right-cmp',
@@ -11,5 +11,7 @@ export class RightCmpComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  @Input()
+  name:string='';
 }
