@@ -1,0 +1,69 @@
+<div class="container">
+
+    <div class="row border mt-5 p-3">
+        <div class="col">
+            <input type="text" placeholder="Item" #itm>
+        </div>
+        <div class="col">
+            <input type="number" placeholder="Qty" #qty>
+        </div>
+        <div class="col">
+            <input type="number" placeholder="Price" #pr>
+        </div>
+        <div class="col">
+            <input type="number" placeholder="Tax" #tx>
+        </div>
+        <div class="col">
+            <input type="button" value="Add" class="btn btn-secondary" (click)="addData(itm.value, qty.value, pr.value, tx.value)">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- <div class="col">
+            <label>Total</label><input type="checkbox" class="ml-2" (change)="onChangeTotal($event)">
+        </div> -->
+        <div class="col">
+            <label>Tax</label><input type="checkbox" class="ml-2" (change)="onChangeTotal($event)">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Op</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col" *ngIf="isTaxChecked">Tax</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let qt of quotations; let ind = index;">
+                        <th scope="row">{{ind+1}}</th>
+                        <th scope="row"><input type="button" class="btn btn-sm btn-warning" value="Delete" (click)="removeData(qt.id)"></th>
+                        <td>{{qt.item}}</td>
+                        <td>{{qt.qty}}</td>
+                        <td>{{qt.unitPrice}}</td>
+                        <td *ngIf="isTaxChecked">{{qt.tax}}</td>
+                        <td>{{(qt.unitPrice * qt.qty) + qt.tax}}</td>
+
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Total:
+                        </th>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
