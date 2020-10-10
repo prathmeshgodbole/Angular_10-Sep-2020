@@ -10,7 +10,7 @@ export class AppComponent {
   clickvalue: string;
 
   onClick(clickval: string) {
-    console.log(`click value called`);
+    console.log(`click value called : ${clickval}`);
     this.clickvalue = clickval;
   }
 }
