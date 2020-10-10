@@ -1,8 +1,4 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-main {
-    top: -100px!important;
-}
-
-.h2 {
-    color: black;
+.d-flex {
+    margin-top: -450px;
 }

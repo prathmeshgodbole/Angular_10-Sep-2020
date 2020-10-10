@@ -18,5 +18,5 @@ para:ElementRef<HTMLElement>
   }
 
   @Input()
-progress:number=0
+progress:number=0;
 }

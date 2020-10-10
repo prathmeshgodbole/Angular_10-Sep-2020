@@ -6,13 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'homework-databinding';
+  title = 'dashboard';
+  clickvalue: string;
 
-  dispName:string='';
-
-  onChange(dName:string){
-    console.log(`Name is changed `)
-    this.dispName=dName;
+  onClick(clickval: string) {
+    console.log(`click value called`);
+    this.clickvalue = clickval;
   }
 }
 

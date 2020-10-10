@@ -11,7 +11,7 @@ export class RightCmpComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   @Input()
-  name:string='';
+  clkv: string;
 }

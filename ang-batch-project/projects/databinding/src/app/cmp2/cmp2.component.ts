@@ -20,7 +20,7 @@ export class Cmp2Component implements OnInit {
   @Output('profileprogress')
   profileProgress: EventEmitter<number>=new EventEmitter()
 
-  
+
   progress:number
 
 @ViewChild('Biodata')
@@ -65,18 +65,18 @@ private calculateProgress(){
  console.log( `Educational is Checked - ${this.Educational.nativeElement.checked}`)
  console.log( `Personal is Checked - ${this.Personal.nativeElement.checked}`)
 
- var count:number=0
+ var count:number=0;
 
   if(this.Biodata.nativeElement.checked==true){
-count+=25
+count+=25;
  } if(this.Demographic.nativeElement.checked==true){
-count+=25
+count+=25;
  }  if(this.Educational.nativeElement.checked==true){
-count+=25
+count+=25;
  } if(this.Personal.nativeElement.checked==true){
-   count+=25
+   count+=25;
  }
-this.progress=count
+this.progress=count;
 // return this.Biodata.nativeElement.checked == true || this.Demographic.nativeElement.checked ==true ||
 // this.Educational.nativeElement.checked == true || this.Personal.nativeElement.checked ==true ? console.log(count+=25): console.log("Error")
 
