@@ -54,12 +54,21 @@ private changeName(){
   console.log( `Customers is Clicked - ${this.Customers.nativeElement.type}`)
   console.log( `Reports is Clicked - ${this.Reports.nativeElement.type}`)
 
-var header:string='hi';
-
+var header:string='';
+//  var str:string;
+//  var res:string;
 if(this.Dashboard.nativeElement.type=='click'){
+//   str = header.replace("hi", "Dashboard");
+// console.log(str);
+// header=header.replace('Homework','Dashboard');
+// str='Dashboard';
+// res=header.concat(str);
+// console.log(res);
 header='Dashboard';
+
 }
 if(this.Orders.nativeElement.type=='click'){
+
   header='Oreders';
   }
   if(this.Products.nativeElement.type=='click'){
@@ -75,6 +84,8 @@ if(this.Orders.nativeElement.type=='click'){
 this.name=header;
 console.log(this.name);
  this.change.emit(this.name);
+//  this.name=res;
+
 
 }
 
