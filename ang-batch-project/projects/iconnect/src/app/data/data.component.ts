@@ -15,11 +15,10 @@ export class DataComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.details.push({ id: uuidv4(),  Company_Name: 'Pen', Company_Description: 'a', Contact_Number: 111111, Email: 'abc@gmail.com', State: 'Goa' })
-    this.details.push({ id: uuidv4(),  Company_Name: 'Pencil', Company_Description: 'b', Contact_Number: 22222, Email: 'pqr@gmail.com', State: 'Goa' })
-    this.details.push({ id: uuidv4(),  Company_Name: 'Eraser', Company_Description: 'c', Contact_Number: 33333, Email:'abc@gmail.com', State: 'Goa' })
-    this.details.push({ id: uuidv4(),  Company_Name: 'Sharpner', Company_Description: 'd', Contact_Number:44444, Email: 'xyz@gmail.com', State: 'Goa' })
-    this.details.push({ id: uuidv4(),  Company_Name: 'NoteBook', Company_Description: 'e', Contact_Number: 55555, Email: 'bob@gmail.com', State: 'Goa' })
+    this.details.push({ id: uuidv4(),  Company_Name: 'Mphasis', Company_Description: 'US Based', Contact_Number: 1234567890, Email: 'mphasis@gmail.com', State: 'Maharashtra' })
+    this.details.push({ id: uuidv4(),  Company_Name: 'Accenture', Company_Description: 'Headquarter in bengluru', Contact_Number: 9876543210, Email: 'acc@gmail.com', State: 'Karnataka' })
+    this.details.push({ id: uuidv4(),  Company_Name: 'Oracle', Company_Description: 'Database related', Contact_Number: 1122334455, Email:'oracle@gmail.com', State: 'Goa' })
+
 
 
     console.log(this.details)

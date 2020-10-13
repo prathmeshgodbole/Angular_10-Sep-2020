@@ -1,72 +1,74 @@
-<div class="container">
-
+<div class="container-fluid">
 
     <form>
-        <div class="container">
+        <div class="container mt-5 mb-5">
+            <h3>Fill The Form</h3>
 
-            <div class="form-row mt-5">
-                <label>Company_Name </label>
-                <input type="text" class="form-control" #cn required>
-
+            <div class=" form-row mt-2 ">
+                <label class="lable">Company_Name </label>
+                <input type="text " class="form-control form-control-sm" #cn required>
             </div>
 
 
-            <div class="form-row mt-2">
-                <label>Company_Description</label>
-                <input type="text" class="form-control" #cd required>
+            <div class="form-row mt-2 ">
+                <label class="lable">Company_Description</label>
+                <input type="text " class="form-control form-control-sm" #cd required>
             </div>
 
-            <div class="form-row mt-2">
-                <label>Contact_Number</label>
-                <input type="number" class="form-control" #num required>
+            <div class="form-row mt-2 ">
+                <label class="lable">Contact_Number</label>
+                <input type="number " class="form-control form-control-sm" #num required>
             </div>
 
-            <div class="form-row mt-2">
-                <label>State</label>
-                <select class="custom-select" #st required>
-            <option selected disabled value="">Choose...</option>
-            <option>Mumbai</option>
-            <option>Bengluru</option>
-            <option>Pune</option>
-          </select>
+            <div class="form-row mt-2 ">
+                <label class="lable">State</label>
+                <select class="custom-select " #st required>
+    <option selected disabled value=" ">Select</option>
+    <option>Mumbai</option>
+    <option>Bengluru</option>
+    <option>Pune</option>
+  </select>
             </div>
 
-            <div class="form-row mt-2">
-                <label>Email</label>
-                <input type="text" class="form-control" #em required>
+            <div class="form-row mt-2 ">
+                <label class="lable">Email</label>
+                <input type="text " class="form-control form-control-sm" #em required>
             </div>
 
-
-            <input type="submit" value="Add" class="btn btn-secondary" (click)="addData(cn.value, cd.value, num.value, em.value,st.value)">
+            <br>
+            <input type="submit" value="Add " class="btn btn-secondary" (click)="addData(cn.value, cd.value, num.value, em.value,st.value) ">
         </div>
     </form>
 
-    <div class="row mt-3">
-        <div class="col">
-            <table class="table table-bordered">
+    <hr>
+
+
+    <div class="row mt-5 mb-5">
+        <div class="col ">
+            <table class="table table-bordered ">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Company_Name</th>
-                        <th scope="col">Company_Description</th>
-                        <th scope="col">Contact_Number</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">State</th>
+                        <th scope="col ">#</th>
+                        <th scope="col ">Company_Name</th>
+                        <th scope="col ">Company_Description</th>
+                        <th scope="col ">Contact_Number</th>
+                        <th scope="col ">Email</th>
+                        <th scope="col ">State</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let dt of details; let ind = index;">
-                        <th scope="row">{{ind+1}}</th>
+                    <tr *ngFor="let dt of details; let ind=index; ">
+                        <th scope="row ">{{ind+1}}</th>
                         <td>{{dt.Company_Name}}</td>
                         <td>{{dt.Company_Description}}</td>
                         <td>{{dt.Contact_Number}}</td>
                         <td>{{dt.Email}}</td>
                         <td>{{dt.State}}</td>
-
                     </tr>
                 </tbody>
 
             </table>
         </div>
     </div>
+    <hr>
 </div>

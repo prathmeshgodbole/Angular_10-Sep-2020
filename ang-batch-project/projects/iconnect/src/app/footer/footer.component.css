@@ -1,7 +1,14 @@
-footer a {
-    color: white;
-}
+    @import "~bootstrap/dist/css/bootstrap.min.css";
+    .footer {
+        padding: 15px;
+    }
 
-footer a:hover {
-    color: white;
-}
+    .footer p {
+        margin-top: 5px;
+        color: white;
+        text-align: center;
+    }
+
+    .footer p:hover {
+        color: white;
+    }

@@ -1,0 +1,27 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+h3 {
+    text-align: center;
+}
+
+form {
+    width: 60%;
+    margin: 0% 20%;
+    background-color: rgb(218, 214, 214);
+}
+
+.container {
+    padding: 10px 10px;
+}
+
+.form-control,
+.custom-select {
+    margin: 2px 40px;
+}
+
+.lable {
+    margin: 0px 40px;
+}
+
+.btn {
+    margin-left: 85%;
+}
