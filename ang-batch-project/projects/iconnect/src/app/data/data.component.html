@@ -1,26 +1,45 @@
 <div class="container">
 
-    <div class="row border mt-5 p-3">
-        <div class="col">
-            <input type="text" placeholder="Company_Name" #cn>
-        </div>
-        <div class="col">
-            <input type="text" placeholder="Company_Description" #cd>
-        </div>
-        <div class="col">
-            <input type="number" placeholder="Contact_Number" #num>
-        </div>
-        <div class="col">
-            <input type="text" placeholder="Email" #em>
-        </div>
-        <div class="col">
-            <input type="text" placeholder="State" #st>
-        </div>
-        <div class="col">
-            <input type="button" value="Add" class="btn btn-secondary" (click)="addData(cn.value, cd.value, num.value, em.value,st.value)">
-        </div>
-    </div>
 
+    <form>
+        <div class="container">
+
+            <div class="form-row mt-5">
+                <label>Company_Name </label>
+                <input type="text" class="form-control" #cn required>
+
+            </div>
+
+
+            <div class="form-row mt-2">
+                <label>Company_Description</label>
+                <input type="text" class="form-control" #cd required>
+            </div>
+
+            <div class="form-row mt-2">
+                <label>Contact_Number</label>
+                <input type="number" class="form-control" #num required>
+            </div>
+
+            <div class="form-row mt-2">
+                <label>State</label>
+                <select class="custom-select" #st required>
+            <option selected disabled value="">Choose...</option>
+            <option>Mumbai</option>
+            <option>Bengluru</option>
+            <option>Pune</option>
+          </select>
+            </div>
+
+            <div class="form-row mt-2">
+                <label>Email</label>
+                <input type="text" class="form-control" #em required>
+            </div>
+
+
+            <input type="submit" value="Add" class="btn btn-secondary" (click)="addData(cn.value, cd.value, num.value, em.value,st.value)">
+        </div>
+    </form>
 
     <div class="row mt-3">
         <div class="col">
