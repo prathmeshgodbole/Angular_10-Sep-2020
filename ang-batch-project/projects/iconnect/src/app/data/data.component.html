@@ -1,23 +1,23 @@
 <div class="container-fluid">
 
-    <form>
+    <form id="form">
         <div class="container mt-5 mb-5">
             <h3>Fill The Form</h3>
 
             <div class=" form-row mt-2 ">
                 <label class="lable">Company_Name </label>
-                <input type="text " class="form-control form-control-sm" #cn required>
+                <input type="text " placeholder="eg.Wipro,HP" class="form-control form-control-sm" #cn required>
             </div>
 
 
             <div class="form-row mt-2 ">
                 <label class="lable">Company_Description</label>
-                <input type="text " class="form-control form-control-sm" #cd required>
+                <input type="text " placeholder="eg.US based,established in 1990" class="form-control form-control-sm" #cd required>
             </div>
 
             <div class="form-row mt-2 ">
                 <label class="lable">Contact_Number</label>
-                <input type="number " class="form-control form-control-sm" #num required>
+                <input type="number " placeholder="eg.5567890432" class="form-control form-control-sm" #num required>
             </div>
 
             <div class="form-row mt-2 ">
@@ -32,7 +32,7 @@
 
             <div class="form-row mt-2 ">
                 <label class="lable">Email</label>
-                <input type="text " class="form-control form-control-sm" #em required>
+                <input type="text " placeholder="eg.bob@gmail.com" class="form-control form-control-sm" #em required>
             </div>
 
             <br>
@@ -43,7 +43,7 @@
     <hr>
 
 
-    <div class="row mt-5 mb-5">
+    <div class="row mt-5 mb-5" id="tab">
         <div class="col ">
             <table class="table table-bordered ">
                 <thead>
@@ -57,7 +57,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let dt of details; let ind=index; ">
+                    <tr *ngFor="let dt of details; let ind=index;" contenteditable="true">
                         <th scope="row ">{{ind+1}}</th>
                         <td>{{dt.Company_Name}}</td>
                         <td>{{dt.Company_Description}}</td>
